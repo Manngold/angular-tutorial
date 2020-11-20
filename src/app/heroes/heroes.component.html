@@ -8,5 +8,9 @@
     <span class="badge">{{ hero.id }}</span> {{ hero.name }}
   </li>
 </ul>
-
+<div *ngIf="messageService.messages.length">
+  <h2>Messages</h2>
+  <button class="clear" (click)="messageService.clear()">clear</button>
+  <div *ngFor="let message of messageService.messages">{{ message }}</div>
+</div>
 <app-hero-detail [hero]="selectedHero"></app-hero-detail>
