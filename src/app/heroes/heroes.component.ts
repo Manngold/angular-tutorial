@@ -9,7 +9,7 @@ import { Hero } from '../shared/hero.model';
   templateUrl: './heroes.component.html',
   styleUrls: ['./heroes.component.css'],
 })
-export class HerosComponent implements OnInit {
+export class HeroesComponent implements OnInit {
   constructor(
     private heroService: HeroService,
     public messageService: MessagesService // template binding을 위해서는 public으로
